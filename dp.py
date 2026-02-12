@@ -8,9 +8,9 @@ import joblib
 # -----------------------------
 model = joblib.load("diabetes_model.pkl")
 
-st.set_page_config(page_title="Diabetes Risk Predictor", layout="centered")
+st.set_page_config(page_title="Diabetes Predictor", layout="centered")
 
-st.title("🩺 Diabetes Risk Prediction System")
+st.title("🩺 Diabetes Prediction System")
 st.write("Enter patient details below to check diabetes risk level.")
 
 # -----------------------------
@@ -62,4 +62,5 @@ if st.button("Predict Risk"):
     elif probability < 0.70:
         st.warning("🟡 Medium Risk")
     else:
+
         st.error("🔴 High Risk")
